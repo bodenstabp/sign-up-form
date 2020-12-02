@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color: #444;
+    background-color: beige;
+    margin: 0;
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+}
+
+header,
+.summary,
+form,
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header */
+
+header{
+    width:100%;
+    margin: auto;
+}
+
+.banner{
+    background-color: #540034;
+    color: #eee;
+    width: 100%;
+    margin: 0 0 1rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.summary{
+    width: 80vw;
+    padding-bottom: 1rem;
+}
+
+.summary::after{
+    content: '';
+    width: 80vw;
+    border-bottom: solid 0.2rem #444;
+
+}
+
+
+.summary h2{
+    font-size: 2rem
+}
+
+.summary p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+hr{
+    border: 0;
+    width: 80vw;               
+    background-color:#999;
+    height: 0.1rem;
+}
+
+/* contact info */
+
+.flex-pair{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container label{
+    padding: 0.5rem 0;
+}
+
+.contact-container label:first-of-type{
+    margin-top: 0;
+}
+
+fieldset{
+    border: none;
+    margin: 1rem auto;
+}
+
+legend{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+input,
+select,
+textarea{
+    border: none;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    background-color: #ccc;
+    color: #444;
+    transition: background-color 0.75s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    background-color: #540034;
+    color: #ccc;
+}
+
+input::placeholder{
+    color: #777;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select
+{
+    width: 80vw;
+    height: 44px;
+    outline: none;
+}
+
+input[type="text"]:last-child{
+    width: 40vw;
+}
+
+/* newsletter */
+
+span{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+textarea{
+    width: 80vw;
+    height: 132px;
+    padding-top: 0.5rem;
+    outline: none;
+}
+
+button{
+    border: solid 0.1rem #540034;
+    border-radius: 5px;
+    background-color: #540034;
+    color: #eee;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    width: 82.5%;
+    margin: 1rem 0 1rem;
+    transition-duration: 1s;
+}
+
+button:hover{
+    background-color: #641134;
+    cursor: pointer;
+}
+
+.news-label{
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.banner,
+.summary h2,
+footer{
+    font-family: 'Noto Sans', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Media Queries */
+
+@media (min-width:768px){
+
+    .summary::after{
+        width: 615px;
+    }
+    
+    main{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    
+    fieldset,
+    textarea,
+    button {
+        width: 100%;
+    }
+
+    hr{
+        width: 80%;
+    }
+    
+    legend:first-of-type{
+        padding-top: 1.5rem;
+    }
+    
+    .flex-pair{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0.5rem 0;
+    }
+
+    .flex-pair:last-of-type{
+        padding-bottom: 1rem;
+    }
+
+    .contact-container{
+        align-items: flex-start;
+    }
+
+    .contact-container input,
+    .contact-container label,
+    .contact-container select{
+        width: unset;
+    }
+
+    .contact-container input,
+    .contact-container select{
+        flex: 1 75%;
+    }
+
+    .contact-container label{
+        flex: 1 25%
+    }
+}
